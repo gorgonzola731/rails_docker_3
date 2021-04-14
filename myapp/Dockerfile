@@ -1,4 +1,7 @@
 FROM ruby:2.5
+
+ENV RAILS_ENV=production
+
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
